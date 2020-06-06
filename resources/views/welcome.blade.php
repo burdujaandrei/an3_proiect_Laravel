@@ -1,0 +1,222 @@
+@extends('template') 
+@section('content')
+   <body class="home-page">
+    <div class="wrap-body">
+        <div class="header">
+            <div id='cssmenu' >
+                <ul>
+                   <li class="active"><a href="{{ url('/') }}"><span>CafeHome</span></a></li>
+                   <li><a href="{{ url('/archive') }}"><span>Archive</span></a></li>
+                    <li><a href="{{ url('/showall') }}"><span>Images</span></a></li>
+
+                    @if (Route::has('login'))
+                            @auth
+                            <li><a href="{{ url('/') }}"><span>Home</span></a></li>
+                            @else
+                            <li><a href="{{ route('login') }}"><span>Login</span></a> </li>
+
+                                @if (Route::has('register'))
+                             <li><a href="{{ route('register') }}"><span>Register</span></a> </li>
+                                @endif
+                            @endauth
+                    @endif 
+                   <li class='last'><a href="{{ url('/contact') }}"><span>Contact</span></a></li>
+                </ul>
+            </div>
+            <div class="custom-banner">
+                <img src="images/main.jpg">
+            </div>
+        </div>
+        <!--////////////////////////////////////Container-->
+        <section id="container">
+            <div class="wrap-container">
+                <!-----------------content-box-1-------------------->
+                <section class="content-box boxstyle-1 box-1">
+                    <div class="zerogrid">
+                        <div class="row wrap-box"><!--Start Box-->
+                            <div class="col-1-3">
+                                <div class="wrap-col">
+                                    <p style="font-size: 1.9rem; font-weight: 300; letter-spacing: .19em; color: #fff; margin-bottom: .62em;">CAFEHOME</p>
+                                    <p>
+                                        <div class="uppercase">
+                                            Nam liber tempor
+                                            <br>
+                                            soluta nobis eleifend
+                                            <br>
+                                            and vulputate velit
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-1-3">
+                                <div class="wrap-col">
+                                    <div class="row">
+                                        <h3 class="widget-title">Where to Find Us</h3>
+                                        <address>
+                                            <strong>AUBERGE LONDON</strong>
+                                            <br>
+                                            Ut wisi enim
+                                            <br>
+                                            Minim veniam 12345
+                                            <br>
+                                            Exerci Tation
+                                        </address>
+                                        <p>
+                                            <strong>Opening Hours:</strong>
+                                            <br>
+                                            Mon - Fri: 9:00 - 21:00
+                                            <br>
+                                            Sat - Sun: 9:00 - 2:00
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-3">
+                                <div class="wrap-col">
+                                    <div class="row">
+                                        <h3 class="widget-title">About Us</h3>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, zzril delenit augue duis dolore te feugait nulla facilisi.
+                                        <br>
+                                        <br>
+                                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming possim assum.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-----------------content-box-2-------------------->
+                <section class="content-box box-2">
+                    <div class="zerogrid">
+                        <div class="row wrap-box"><!--Start Box-->
+                            <div class="header">
+                                <div class="wrapper">
+                                    <h2 class="color-blue">Menu</h2>
+                                </div>
+                            </div>  
+                            <div class="row">
+                                <div class="col-1-3">
+                                    <div class="wrap-col">
+                                        <div class="portfolio-box">
+                                            <img src="images/1.jpg" class="img-responsive" alt="">
+                                            <div class="portfolio-box-caption">
+                                                <div class="portfolio-box-caption-content">
+                                                    <div class="project-category text-faded">
+                                                        <a href="#">Category</a>
+                                                    </div>
+                                                    <div class="project-name">
+                                                        <a href="single.html">Project Name</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-box">
+                                            <img src="images/4.jpg" class="img-responsive" alt="">
+                                            <div class="portfolio-box-caption">
+                                                <div class="portfolio-box-caption-content">
+                                                    <div class="project-category text-faded">
+                                                        <a href="#">Category</a>
+                                                    </div>
+                                                    <div class="project-name">
+                                                        <a href="single.html">Project Name</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1-3">
+                                    <div class="wrap-col">
+                                        <div class="portfolio-box">
+                                            <img src="images/2.jpg" class="img-responsive" alt="">
+                                            <div class="portfolio-box-caption">
+                                                <div class="portfolio-box-caption-content">
+                                                    <div class="project-category text-faded">
+                                                        <a href="#">Category</a>
+                                                    </div>
+                                                    <div class="project-name">
+                                                        <a href="single.html">Project Name</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-box">
+                                            <img src="images/5.jpg" class="img-responsive" alt="">
+                                            <div class="portfolio-box-caption">
+                                                <div class="portfolio-box-caption-content">
+                                                    <div class="project-category text-faded">
+                                                        <a href="#">Category</a>
+                                                    </div>
+                                                    <div class="project-name">
+                                                        <a href="single.html">Project Name</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1-3">
+                                    <div class="wrap-col">
+                                        <div class="portfolio-box">
+                                            <img src="images/3.jpg" class="img-responsive" alt="">
+                                            <div class="portfolio-box-caption">
+                                                <div class="portfolio-box-caption-content">
+                                                    <div class="project-category text-faded">
+                                                        <a href="#">Category</a>
+                                                    </div>
+                                                    <div class="project-name">
+                                                        <a href="single.html">Project Name</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-box">
+                                            <img src="images/6.jpg" class="img-responsive" alt="">
+                                            <div class="portfolio-box-caption">
+                                                <div class="portfolio-box-caption-content">
+                                                    <div class="project-category text-faded">
+                                                        <a href="#">Category</a>
+                                                    </div>
+                                                    <div class="project-name">
+                                                        <a href="single.html">Project Name</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-----------------content-box-3-------------------->
+                <section class="content-box boxstyle-2 box-3">
+                    <div class="zerogrid">
+                        <div class="row wrap-box"><!--Start Box-->
+                            <div class="row">
+                                <div class="col-1-2">
+                                    <div class="wrap-col">
+                                        <p class="uppercase">
+                                            <strong>CAFEHOME</strong>
+                                            Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum.
+                                        </p>
+                                        <p>
+                                            Etiam rutrum ex vel sagittis lacinia. Phasellus non tempor libero, eu volutpat nisl. Nullam a nunc sed dolor facilisis hendrerit elementum et nisl. Maecenas eleifend porttitor urna acilisis hendrerit elementum et nis. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+                                        </p>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium</p>
+                                    </div>
+                                </div>
+                                <div class="col-1-2">
+                                    <div class="wrap-col">
+                                        <img class="" src="images/4.jpg" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </section>
+@endsection('content') 
